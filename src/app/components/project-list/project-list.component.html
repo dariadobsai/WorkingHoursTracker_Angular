@@ -1,0 +1,10 @@
+
+<h1>
+  {{ project | json }}
+</h1>
+
+<div *ngFor="let p of projects; let i = index">
+  <h4>{{p.name}}</h4>
+  <p *ngIf="p.deadline === null">{{i + " is null now"}}</p>
+
+</div>
