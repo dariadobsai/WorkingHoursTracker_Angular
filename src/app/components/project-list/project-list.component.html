@@ -1,10 +1,12 @@
-
-<h1>
-  {{ project | json }}
-</h1>
-
-<div *ngFor="let p of projects; let i = index">
+<!-- <div *ngFor="let p of projects; let i = index">
   <h4>{{p.name}}</h4>
   <p *ngIf="p.deadline === null">{{i + " is null now"}}</p>
 
+</div>-->
+
+<div class="container">
+  <h2>Projects</h2>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let p of projects"> {{ p.name }}</li>
+  </ul>
 </div>
