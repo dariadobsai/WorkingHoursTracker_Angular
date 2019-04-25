@@ -1,0 +1,9 @@
+.page-footer {
+  background-color: ghostwhite;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  font-size: 12px;
+}
+
