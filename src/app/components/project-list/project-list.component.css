@@ -1,0 +1,14 @@
+.table-container {
+  margin: 16px 100px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.table-header {
+  font-size: 14px;
+}
+
+.table-hover tbody tr:hover td {
+  background-color: #FFFDE8;
+}
+

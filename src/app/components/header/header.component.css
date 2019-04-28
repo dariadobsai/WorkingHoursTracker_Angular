@@ -1,6 +1,9 @@
-/*
-nav{
-  background-color: red;
+*{
+  font-size: 14px;
 }
 
-*/
+.navbar-nav{
+  padding-left: 8px;
+}
+
+
