@@ -1,4 +1,4 @@
-.form-inline{
+.project-container{
   margin-top: 32px;
   margin-left: 32px;
 }
@@ -7,8 +7,38 @@
   margin-right: 16px;
 }
 
+.control-label{
+  padding-right: 16px;
+}
+
 .form-group{
   margin-top: 16px;
   margin-left: 32px;
   max-width: 400px;
 }
+
+#action-btn{
+  margin-left: 32px;
+  width: 80px;
+}
+
+.table-container {
+  margin-left: 32px;
+  margin-right: 32px;
+  max-width: 400px;
+  text-align: center;
+  font-size: 14px;
+  border-radius:10px
+}
+
+.table{
+  border-radius: 10px;
+}
+
+.table-header{
+  background-color: aliceblue;
+
+
+}
+
+

@@ -1,5 +1,6 @@
+<div class="project-container">
 <form class="form-inline">
-  <label class="label">Project</label>
+  <label class="label">Project:</label>
 <div class="btn-group">
   <button type="button" class="btn btn-primary">Action</button>
   <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
@@ -11,8 +12,40 @@
   </div>
 </div>
 </form>
+</div>
 
+<form class="form-inline">
+  <div class="form-group form-group-sm">
+    <label class="control-label" for="task_name">Task name:</label>
+    <div>
+      <input class="form-control" type="text" id="task_name" placeholder="Task name">
+    </div>
+  </div>
+</form>
+
+<!-- TODO: limit number of input -->
 <div class="form-group">
-  <label for="task_description">Task description</label>
+  <label for="task_description">Task description:</label>
   <textarea class="form-control" id="task_description" rows="3"></textarea>
 </div>
+
+<div class="table-container">
+<table class="table table-bordered ">
+  <thead class="table-header">
+  <tr>
+    <th scope="col">Current time</th>
+    <th scope="col">Total time</th>
+    <th scope="col">Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>00:00:00</td>
+    <td>00:00</td>
+    <td>2019/05/01</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<button id="action-btn" type="button" class="btn btn-success">Start</button>
