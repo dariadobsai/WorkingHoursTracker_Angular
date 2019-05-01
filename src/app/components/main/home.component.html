@@ -2,12 +2,12 @@
   <form class="form-inline">
     <label class="label">Project:</label>
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+        select...
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-<!--        <span *ngFor="let p in user.projects"></span>-->
-        <button class="dropdown-item" type="button">Action</button>
+      <div class="dropdown-menu">
+      <a class="dropdown-item" *ngFor="let p of user.projects">{{p.name}}</a>
       </div>
     </div>
   </form>
@@ -48,3 +48,4 @@
 </div>
 
 <button id="action-btn" type="button" class="btn btn-success">Start</button>
+

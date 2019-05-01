@@ -7,7 +7,7 @@ import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
-import { AboutComponent } from './components/about/about.component';
+import {AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [

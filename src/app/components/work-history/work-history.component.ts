@@ -3,16 +3,13 @@ import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-task-list',
-  templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css']
+  templateUrl: './work-history.component.html',
+  styleUrls: ['./work-history.component.css']
 })
-export class TaskListComponent implements OnInit {
+export class WorkHistoryComponent implements OnInit {
 
   constructor(private userService: UserService) {
   }
-
-  // task;
-  // tasks: any[];
 
   user;
 
