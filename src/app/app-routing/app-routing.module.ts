@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import {Route, RouterModule, Routes} from '@angular/router';
 import {ProjectListComponent} from '../components/project-list/project-list.component';
 import {TaskListComponent} from '../components/task-list/task-list.component';
-import {DaySettingComponent} from '../components/day-setting/day-setting.component';
+import {HomeComponent} from '../components/main/home.component';
+import {AboutComponent} from '../components/about/about.component';
 
 const routs: Routes = [
   {path: 'projects', component: ProjectListComponent},
   {path: 'tasks', component: TaskListComponent},
-  {path: 'myday', component: DaySettingComponent}
+  {path: 'home', component: HomeComponent},
+  {path: 'about', component: AboutComponent}
 ];
 
 @NgModule({
@@ -16,4 +18,4 @@ const routs: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ProjectListComponent, TaskListComponent, DaySettingComponent];
+export const routingComponents = [ProjectListComponent, TaskListComponent, HomeComponent, AboutComponent];

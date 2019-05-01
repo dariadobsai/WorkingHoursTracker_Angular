@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-task-list',
@@ -8,16 +8,27 @@ import {HttpClient} from '@angular/common/http';
 })
 export class TaskListComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private userService: UserService) {
+  }
 
-  task;
+  // task;
+  // tasks: any[];
 
-  tasks: any[];
+  user;
+
+  users;
 
   ngOnInit() {
-    this.http.get<any[]>('http://localhost:8080/tasks/').subscribe(
+
+    this.userService.getUsers().subscribe(
       data => {
-        this.tasks = data;
+        this.users = data;
+      }
+    );
+
+    this.userService.getUser().subscribe(
+      data => {
+        this.user = data;
       }
     );
   }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {ProjectService} from '../../services/project.service';
 
 @Component({
   selector: 'app-project-list',
@@ -8,28 +8,18 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ProjectListComponent implements OnInit {
 
-  constructor(private http: HttpClient) {}
+  constructor(private projectService: ProjectService) {
+  }
 
-  project;
+  projects;
 
-  projects: any[];
+  ngOnInit() {
 
-  ngOnInit(): void {
-    this.project = 'my project';
-
-    this.http.get('http://localhost:8080/projects/2').subscribe(
+    this.projectService.getProjects().subscribe(
       data => {
-        console.log(data);
-        this.project = data;
-      }
-    );
-
-    this.http.get<any[]>('http://localhost:8080/projects/').subscribe(
-      data => {
-        console.log(data);
         this.projects = data;
       }
     );
-  }
 
+  }
 }

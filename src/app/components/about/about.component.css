@@ -1,0 +1,35 @@
+.about-container{
+
+  color: white;
+  /*background-image: url("../../../assets/img/gradient.jpg");*/
+  height: 100%;
+  font-family: Verdana, sans-serif;
+  background-image: linear-gradient(to bottom right, #722E72, #B83F6E);
+
+  text-align: center;
+}
+.main-text{
+  padding: 48px;
+}
+
+.welcome-msg{
+  padding-top: 32px;
+  font-size: 40px;
+}
+
+.link-container{
+  padding: 48px;
+  text-align: right;
+}
+
+.link{
+  font-size: 16px;
+  text-decoration: underline;
+  color: white;
+}
+
+#it_girl_link{
+  text-decoration: none;
+  color: #01B5AF;
+}
+
