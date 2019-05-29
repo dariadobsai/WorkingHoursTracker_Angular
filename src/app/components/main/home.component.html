@@ -6,8 +6,8 @@
               aria-haspopup="true" aria-expanded="false">
         Select
       </button>
-      <div class="dropdown-menu">
-      <a class="dropdown-item" *ngFor="let p of user.projects">{{p.name}}</a>
+      <div class="dropdown-menu" *ngIf="user">
+        <a class="dropdown-item" *ngFor="let p of user.projects">{{p.name}}</a>
       </div>
     </div>
   </form>
@@ -50,7 +50,14 @@
     </thead>
     <tbody>
     <tr>
-      <td id="current-time">00:00:00</td>
+      <td id="current-time">
+        <span *ngIf="timer">
+          {{timer.getTimeValues().toString()}}
+        </span>
+        <span *ngIf="!timer">
+          00:00:00
+        </span>
+      </td>
       <td>00:00</td>
       <td id="current-date">2019/05/01</td>
     </tr>
@@ -59,6 +66,13 @@
 </div>
 
 <div class="btn-control">
-<button (click)="startTimer()" id="action-btn_start" type="button" class="btn">Start</button>
-<button (click)="stopTimer()" id="action-btn_stop" type="button" class="btn">Stop</button>
+<button [ngClass]="{'btn-warning': started, 'btn-success': !started}" (click)="startTimer()" type="button" class="btn">
+   <span *ngIf="!started">
+          Start
+   </span>
+  <span *ngIf="started">
+          Pause
+   </span>
+</button>
+<button (click)="stopTimer()" id="action-btn_stop" type="button" class="btn btn-danger">Stop</button>
 </div>

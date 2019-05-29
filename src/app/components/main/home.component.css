@@ -1,23 +1,23 @@
-.project-container{
+.project-container {
   margin-top: 32px;
   margin-left: 32px;
 }
 
-.label{
+.label {
   margin-right: 16px;
 }
 
-.control-label{
+.control-label {
   padding-right: 16px;
 }
 
-.form-group{
+.form-group {
   margin-top: 16px;
   margin-left: 32px;
   max-width: 400px;
 }
 
-#action-btn{
+#action-btn {
   margin-left: 32px;
   width: 80px;
 }
@@ -28,33 +28,24 @@
   max-width: 400px;
   text-align: center;
   font-size: 14px;
-  border-radius:10px
+  border-radius: 10px
 }
 
-.table{
+.table {
   border-radius: 10px;
 }
 
-.table-header{
+.table-header {
   background-color: aliceblue;
 }
 
-.btn{
+.btn {
   color: white;
 }
 
-.btn-control{
+.btn-control {
   margin-left: 32px;
 }
 
-#action-btn_start{
-  background-color: #28A745;
-  margin-right: 16px;
-}
-
-#action-btn_stop{
-  background-color: #FC5F50;
-
-}
 
 

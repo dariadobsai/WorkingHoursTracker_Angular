@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {UserService} from '../../services/user.service';
 import {Timer} from 'easytimer.js';
 
@@ -14,52 +14,41 @@ export class HomeComponent implements OnInit {
   }
 
   user;
-  element;
   started = false;
+  timer;
 
   ngOnInit() {
-    this.element = document.getElementById('action-btn_start');
-
     this.userService.getUser().subscribe(
       data => {
         this.user = data;
       }
     );
 
+    this.timer = new Timer();
     HomeComponent.setDate();
   }
 
   startTimer() {
-    // Color for "Pause" button
-    this.element.style.background = '#E18E2F';
-    this.element.textContent = 'Pause';
+    if (!this.started){
 
-    const timer = new Timer();
+      this.timer.start();
 
-    /* timer.start();
-     timer.addEventListener('secondsUpdated', function(e) {
-       $('#current-time').html(timer.getTimeValues().toString());
-     });*/
+      this.started = true;
 
-    this.started = true;
+    }else {
+      this.pauseTimer();
+
+      this.started = false;
+    }
   }
 
   pauseTimer() {
-
-  }
-
-  resumeTimer() {
-
+    this.timer.pause();
   }
 
   stopTimer() {
-    // TODO: stop the timer
+    this.timer.stop();
   }
-
-  /*myTimer() {
-    var date = new Timestamp();
-    document.getElementById("demo").innerHTML = date.toLocaleTimeString();
-  }*/
 
   static setDate() {
     const currentDate = new Date();
