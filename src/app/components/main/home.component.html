@@ -2,9 +2,9 @@
   <form class="form-inline">
     <label class="label">Project:</label>
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      <button  class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-        select...
+        Select
       </button>
       <div class="dropdown-menu">
       <a class="dropdown-item" *ngFor="let p of user.projects">{{p.name}}</a>
@@ -12,6 +12,17 @@
     </div>
   </form>
 </div>
+
+<!-- TODO: Update text of Dropdown menu -->
+
+<!--<script>
+  $(document).ready(function(){
+    $(".dropdown").on("show.bs.dropdown", function(event){
+      var x = $(event.relatedTarget).text(); // Get the button text
+      alert("You clicked on: " + x);
+    });
+  });
+</script>-->
 
 <form class="form-inline">
   <div class="form-group form-group-sm">
@@ -39,13 +50,15 @@
     </thead>
     <tbody>
     <tr>
-      <td>00:00:00</td>
+      <td id="current-time">00:00:00</td>
       <td>00:00</td>
-      <td>2019/05/01</td>
+      <td id="current-date">2019/05/01</td>
     </tr>
     </tbody>
   </table>
 </div>
 
-<button id="action-btn" type="button" class="btn btn-success">Start</button>
-
+<div class="btn-control">
+<button (click)="startTimer()" id="action-btn_start" type="button" class="btn">Start</button>
+<button (click)="stopTimer()" id="action-btn_stop" type="button" class="btn">Stop</button>
+</div>

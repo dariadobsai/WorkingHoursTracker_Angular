@@ -39,4 +39,22 @@
   background-color: aliceblue;
 }
 
+.btn{
+  color: white;
+}
+
+.btn-control{
+  margin-left: 32px;
+}
+
+#action-btn_start{
+  background-color: #28A745;
+  margin-right: 16px;
+}
+
+#action-btn_stop{
+  background-color: #FC5F50;
+
+}
+
 
